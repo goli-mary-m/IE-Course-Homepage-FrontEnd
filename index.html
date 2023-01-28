@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Internet Engineering Course</title>
+        <meta name="description" content="Internet Engineering Course Homepage">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/png" href="./images/icon.png" />
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="panel header">
+                <div class="header_content">
+                    <p id="header_title">Internet Engineering</p>
+                    <p id="header_description">What we are going to learn in this course ...</p>
+                    <p>
+                        <button type="button" id="header_button" onclick="window.location.href='#books_fragment'">
+                            see this course related books
+                        </button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel lectures">
+                <div id="lecture1" class="lecture">
+                    <img src="./images/http_icon.png" alt="HTTP" id="http_icon" class="lecture_icon" height="60px"/>
+                    <p><b>HTTP</b></p>
+                    <p>
+                        The Hypertext Transfer Protocol is an application layer protocol.
+                        <br />
+                        Communication between client computers and web servers is done by sending HTTP Requests
+                        and receiving HTTP Responses.
+                    </p>
+                </div>
+                
+                <div id="lecture2" class="lecture">
+                    <img src="./images/css_icon.png" alt="CSS" id="css_icon" class="lecture_icon" height="60px"/>
+                    <p><b>HTML, CSS</b></p>
+                    <p>
+                        HTML (HyperText Markup Language) is the standard markup language for Web pages.
+                        <br />
+                        CSS is the language we use to style an HTML document. CSS describes how HTML elements
+                        should be displayed.
+                    </p>
+                </div>
+
+                <div id="lecture3" class="lecture">
+                    <img src="./images/js_icon.png" alt="JS" id="js_icon" class="lecture_icon" height="60px"/>
+                    <p><b>JAVASCRIPT</b></p>
+                    <p>
+                        JavaScript is the programming language of the Web. JavaScript often abbreviated to JS is a 
+                        lightweight, interoreted, or just-in-time compiled programming language with first-class functions.
+                    </p>
+                </div>
+
+                <div id="lecture4" class="lecture">
+                    <img src="./images/go_icon.png" alt="Go" id="go_icon" class="lecture_icon" height="60px"/>
+                    <p><b>GOLANG</b></p>
+                    <p>
+                        Go language is a programming language initially developed at Google. It is a statically-typed
+                        language having syntax similar to that of C.
+                        <br />
+                        Go is used to create computer programs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="panel books" id="books_fragment">
+                <p id="books_title">Most popular books</p>
+                <div class="books_content">
+
+                    <div id="book1" class="book">
+                        <div class="book_card_inner">
+                            <div class="book_card_front">
+                                <img src="./images/Book1-1.jpg" class="book_icon" width=100%/>
+                                <p><b>JAVASCRIPT GUIDE</b></p>
+                                <p>
+                                    <ul class="book_info">
+                                        <li>JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language</li>
+                                        <li>Author: David Flanagan </li>
+                                        <li>Publication date: June 23, 2020</li>
+                                        <li>Paperback: 704 pages</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="book_card_back">
+                                <p>Price: $32.34</p>
+                                <a class="buy_button" href="#popup_book1">Buy this book</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="book2" class="book">
+                        <div class="book_card_inner">
+                            <div class="book_card_front">
+                                <img src="./images/Book2-1.jpg" class="book_icon" width=100%/>
+                                <p><b>ROAD TO REACT</b></p>
+                                <p>
+                                    <ul class="book_info">
+                                        <li>The Road to React: Your journey to master plain yet pragmatic React.js</li>
+                                        <li>Author: Robin Wieruch </li>
+                                        <li>Publication date: September 14, 2018</li>
+                                        <li>Paperback: 288 pages</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="book_card_back">
+                                <p>Price: $29.99</p>
+                                <a class="buy_button" href="#popup_book2">Buy this book</a>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="book3" class="book">
+                        <div class="book_card_inner">
+                            <div class="book_card_front">
+                                <img src="./images/Book3-1.jpg" class="book_icon" width=100%/>
+                                <p><b>INTRODUCING GO</b></p>
+                                <p>
+                                    <ul class="book_info">
+                                        <li>Introducing Go: Build Reliable, Scalable Programs</li>
+                                        <li>Author: Caleb Doxsey </li>
+                                        <li>Publication date: March 1, 2016</li>
+                                        <li>Paperback: 122 pages</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="book_card_back">
+                                <p>Price: $21.49</p>
+                                <a class="buy_button" href="#popup_book3">Buy this book</a>
+                            </div>
+                        </div>                       
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel footer"> 
+                <div id="footer_item1" class="footer_item">
+                    <p class="footer_links"><a href="#">class info</a></p>
+                    <p class="footer_links"><a href="#">contact us</a></p>
+                    <p class="footer_links"><a href="#">privacy policy</a></p>
+                    <p class="footer_links"><a href="#">terms</a></p>
+                </div>
+
+                <div id="footer_item2" class="footer_item">
+                    <p>Built by Maryam Goli for Internet Engineering course (Fall 2022).</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup_book1" class="popup_overlay">
+            <div class="popup">
+                <img class="popup_image" src="./images/Book1-2.jpg" alt="book1">
+                <a class="close" href="#books_fragment">&times;</a>
+                <div class="popup_content">
+                    <h3>START READING NOW</h3>
+                    <p>
+                        JavaScript is the programming language of the web and is used by more software developers today
+                        than any other programming language. For nearly 25 years this best seller has been the go-to guide
+                        for JavaScript programmers. The seventh edition is fully updated to cover the 2020 version of 
+                        JavaScript, and new chapters cover classes, modules, iterators, generators, Promises, async/await,
+                        and metaprogramming. You'll find illuminating and engaging example code throughout.
+                        <br />
+                        This book is for programmers who want to learn JavaScript and for web developers who want to take
+                        their understanding and mastery to the next level. It begins by explaining the JavaScript language 
+                        itself, in detail, from the bottom up. It then builds on that foundation to cover the web platform 
+                        and Node.js.
+                    </p>
+                    <a class="buy_button" href="https://a.co/d/aNgK0sB" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup_book2" class="popup_overlay">
+            <div class="popup">
+                <img class="popup_image" src="./images/Book2-2.png" alt="book2">
+                <a class="close" href="#books_fragment">&times;</a>
+                <div class="popup_content">
+                    <h3>START READING NOW</h3>
+                    <p>
+                        In "The Road to React" you will learn about all the fundamentals of React.js
+                        with Hooks while building a full-blown React application step by step. 
+                        While you create the React application, every chapter will introduce you to a new 
+                        React key feature. However, there is more than only the fundamentals: The book 
+                        dives into related topics (e.g. React with TypeScript, Testing, Performance Optimizations)
+                        and advanced feature implementations like client- and server-side searching. 
+                        At the end of the book, you will have a fully working deployed React application.
+                    </p>
+                    <a class="buy_button" href="https://a.co/d/3YY648p" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup_book3" class="popup_overlay">
+            <div class="popup">
+                <img class="popup_image" src="./images/Book3-2.jpg" alt="book1">
+                <a class="close" href="#books_fragment">&times;</a>
+                <div class="popup_content">
+                    <h3>START READING NOW</h3>
+                    <p>
+                        Perfect for beginners familiar with programming basics, this hands-on guide provides
+                        an easy introduction to Go, the general-purpose programming language from Google. 
+                        Author Caleb Doxsey covers the languages core features with step-by-step instructions
+                        and exercises in each chapter to help you practice what you learn.
+                        <br />
+                        Go is a general-purpose programming language with a clean syntax and advanced features, 
+                        including concurrency. This book provides the one-on-one support you need to get started 
+                        with the language, with short, easily digestible chapters that build on one another. 
+                        By the time you finish this book, not only will you be able to write real Go programs, 
+                        you'll be ready to tackle advanced techniques.
+                    </p>
+                    <a class="buy_button" href="https://a.co/d/gyfCNRh" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>    

@@ -1,0 +1,369 @@
+:root {
+    --container_padding: 10px;
+    --panel_padding: 20px;
+    --color1: rgba(83, 83, 88);
+    --color2: rgb(159, 180, 188);
+    --color3: rgba(235, 239, 237);
+}
+
+.container {
+    background-color: white;
+    padding: var(--container_padding);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.panel {
+    padding: var(--panel_padding);
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------------ Header -------------------------------------------------- */
+
+.header {
+    background: url("./images/header_background.jpg") no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    line-height: 1.5;
+}
+
+.header_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#header_title {
+    display: block;
+    font-size: 4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    white-space: break-spaces;
+    animation: revealText 3s;
+}
+
+#header_description {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: revealText 3s;
+}
+
+#header_button {
+    padding: 10px 30px 10px 30px;
+    background-color: var(--color3);
+    opacity: 0.8;
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+
+    cursor: pointer;
+    overflow: hidden;
+    animation-delay: 5s;
+    animation: revealButton 3s;
+}
+
+#header_button:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+@keyframes revealText {
+    0% {
+        transform: translate(-150%,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes revealButton {
+    0% {
+        transform: translate(0,100%);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+/* ------------------------------------------------ Lectures -------------------------------------------------- */
+
+.lectures {
+    background: 
+    linear-gradient(to right bottom, rgba(40, 75, 99, 0.897), rgba(87, 106, 117, 0.781),  rgba(246, 246, 248, 0.808)),
+    url("./images/lectures_background.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.lecture {
+    position: relative;
+    flex-basis: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: var(--color3);
+    opacity: 0.7;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+
+    transition: transform 0.25s;
+}
+
+.lecture:hover {
+    transform: scale(1.1);
+}
+
+.lecture_icon {
+    opacity: 0.7;
+}
+
+/* ------------------------------------------------ Books -------------------------------------------------- */
+
+.books {
+    background: var(--color3);
+    background-size: cover;
+    padding: 50px 100px 50px 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.books_content {
+    background: var(--color3);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.book {
+    flex-basis: 100%;
+    height: 50vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+
+    background-color: var(--color1);
+    opacity: 0.8;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    color: white;
+}
+
+.book_info {
+    text-align: left;
+}
+
+.book_card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+  
+.book:hover .book_card_inner {
+    transform: rotateY(180deg);
+}
+  
+.book_card_front, .book_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+  
+.book_card_front {
+    background-color: var(--color3);
+    color: black;
+}
+  
+.book_card_back {
+    vertical-align: middle;
+    background-color: var(--color3);
+    color: black;
+
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy_button {
+    padding: 10px 30px 10px 30px;
+    background-color: var(--color2);
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+}
+
+.buy_button:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+#books_title {
+    padding-bottom: 20px;
+
+    color: var(--color1);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    transition: transform 0.25s;
+}
+
+#books_title:hover {
+    transform: scale(1.1);
+}
+
+.book_icon {
+    width: 100%;
+}
+
+/* ------------------------------------------------ Footer -------------------------------------------------- */
+
+.footer {
+    background: url(./images/footer.jpg);
+    background-size: cover;
+    padding: 50px 100px 50px 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.footer_item {
+    flex-basis: 100%;
+    margin-left: 20px;
+    padding: 10px;
+    opacity: 0.8;
+
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+
+    border-top: solid var(--color1);
+}
+
+#footer_item1 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+a:link {color: black}  
+a:visited {color:black}  
+a:hover {color: var(--color1)} 
+
+/* ------------------------------------------------ Popups -------------------------------------------------- */
+
+.popup_overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup_overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--color3);
+    border: 10px solid var(--color2);
+    border-radius: 5px;
+    width: 60%;
+    height: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.popup_image {
+    padding: 10px 30px 10px 10px;
+    border-right: 5px solid var(--color1);
+}
+  
+.popup_content {
+    overflow: auto;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.popup .close:hover {
+    color: var(--color2);
+}
